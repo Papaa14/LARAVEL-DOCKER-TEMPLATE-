@@ -96,5 +96,26 @@ const submit = () => {
                 </PrimaryButton>
             </div>
         </form>
+        <div class="mt-6">
+            <div class="relative">
+                <div class="absolute inset-0 flex items-center">
+                    <div class="w-full border-t border-gray-300" />
+                </div>
+                <div class="relative flex justify-center text-sm">
+                    <span class="bg-white px-2 text-gray-500">Or continue with</span>
+                </div>
+            </div>
+
+            <div class="mt-6 grid grid-cols-2 gap-3">
+                <a :href="route('auth.socialite.redirect', 'google')"
+                   class="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50">
+                    Google
+                </a>
+                <a :href="route('auth.socialite.redirect', 'github')"
+                   class="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-500 shadow-sm hover:bg-gray-50">
+                    GitHub
+                </a>
+            </div>
+        </div>
     </GuestLayout>
 </template>
